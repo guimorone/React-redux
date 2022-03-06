@@ -5,6 +5,8 @@ import { bindActionCreators } from 'redux';
 
 import * as CourseActions from '../../store/actions/course';
 
+import { Button } from 'react-bootstrap';
+
 const Sidebar = ({ modules, toggleLesson }) => (
   <div>
     {modules.map(module => (
@@ -13,7 +15,7 @@ const Sidebar = ({ modules, toggleLesson }) => (
         <ul>
           {module.lessons.map(lesson => (
             <li key={lesson.id}> {lesson.title} 
-            <button onClick={ _ => toggleLesson(module, lesson)}>Selecionar</button>
+            <Button variant="secondary" className="m-1" onClick={ _ => toggleLesson(module, lesson)}>Selecionar</Button>
             </li>
           ))}
         </ul>
