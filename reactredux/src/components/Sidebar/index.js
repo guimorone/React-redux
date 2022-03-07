@@ -15,6 +15,7 @@ const Sidebar = ({ modules, toggleLesson }) => (
         <ul>
           {module.lessons.map(lesson => (
             <li key={lesson.id}> {lesson.title} 
+            // como toggleLesson tem o mesmo nome da action declarada na outra pasta (pasta de actions), podemos só escrever dessa forma abaixo
             <Button variant="secondary" className="m-1" onClick={ _ => toggleLesson(module, lesson)}>Selecionar</Button>
             </li>
           ))}
